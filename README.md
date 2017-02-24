@@ -1,2 +1,2 @@
-# paper
-paper_js
+# hello-world
+Hello world new project template.
