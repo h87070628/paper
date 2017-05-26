@@ -17,6 +17,7 @@
 		CE2C90CE1ED6B658005E81C4 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2C90C41ED6AB52005E81C4 /* CoreFoundation.framework */; };
 		CE2C90CF1ED6B658005E81C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2C90C21ED6AB47005E81C4 /* Foundation.framework */; };
 		CEF80CAF1ED6A6CD00B01DE8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEF80CAE1ED6A6CD00B01DE8 /* main.cpp */; };
+		CEFFF77C1ED7C3F000B1F514 /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFFF77B1ED7C3F000B1F514 /* libSOIL.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,6 +51,7 @@
 		CE2C90CC1ED6AC93005E81C4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		CEF80CAB1ED6A6CD00B01DE8 /* openGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = openGL; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF80CAE1ED6A6CD00B01DE8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CEFFF77B1ED7C3F000B1F514 /* libSOIL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSOIL.a; path = ../../../../../../usr/local/lib/libSOIL.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				CE2C90BD1ED6AA62005E81C4 /* libglfw3.a in Frameworks */,
 				CE2C90C11ED6AA96005E81C4 /* libGLEW.a in Frameworks */,
 				CE2C90BF1ED6AA91005E81C4 /* libGLEWmx.a in Frameworks */,
+				CEFFF77C1ED7C3F000B1F514 /* libSOIL.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +78,7 @@
 		CE1215D41ED6A8A2003B37BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEFFF77B1ED7C3F000B1F514 /* libSOIL.a */,
 				CE2C90CC1ED6AC93005E81C4 /* CoreVideo.framework */,
 				CE2C90CA1ED6AC8A005E81C4 /* IOKit.framework */,
 				CE2C90C81ED6AC80005E81C4 /* Cocoa.framework */,
@@ -279,11 +283,12 @@
 				HEADER_SEARCH_PATHS = (
 					"$(glfw_header)",
 					"$(glew_header)",
+					"$(soil_header)",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(glfw_lib)",
 					"$(glew_lib)",
-					/usr/local/Cellar/glew/1.12.0/lib,
+					"$(soil_lib)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -295,11 +300,12 @@
 				HEADER_SEARCH_PATHS = (
 					"$(glfw_header)",
 					"$(glew_header)",
+					"$(soil_header)",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(glfw_lib)",
 					"$(glew_lib)",
-					/usr/local/Cellar/glew/1.12.0/lib,
+					"$(soil_lib)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

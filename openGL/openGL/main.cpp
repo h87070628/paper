@@ -16,6 +16,9 @@
 // GLFW
 #include <glfw3.h>
 
+//SOIL
+#include <SOIL.h>
+
 // Read contents form file
 bool get_file_contents(const char *filename, std::string &filebuf)
 {
@@ -48,9 +51,6 @@ int main()
 {
     std::cout << "Starting GLFW context, OpenGL 3.3" << std::endl;
     
-    // Init GLFW
-    glfwInit();
-    
     // Shaders
     std::string vfilebuf = "";
     std::string ffilebuf = "";
@@ -58,6 +58,9 @@ int main()
     get_file_contents((shaderDir + "fragmentShader.fag").c_str(), ffilebuf);
     const GLchar* vertexShaderSource = vfilebuf.c_str();
     const GLchar* fragmentShaderSource = ffilebuf.c_str();
+    
+    // Init GLFW
+    glfwInit();
     
     // Set all the required options for GLFW
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
