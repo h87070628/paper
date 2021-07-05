@@ -1,1 +1,30 @@
-<!DOCTYPE html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/home/favicon.ico"><title>testpage</title><link href="/home/css/app.e6826607.css" rel="preload" as="style"><link href="/home/js/app.fa6cdb24.js" rel="preload" as="script"><link href="/home/js/chunk-vendors.5028b17c.js" rel="preload" as="script"><link href="/home/css/app.e6826607.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but testpage doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div><script src="/home/js/chunk-vendors.5028b17c.js"></script><script src="/home/js/app.fa6cdb24.js"></script></body></html>
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var pWeb = "https://hub.dcm.pub/Home/p/index.html"
+        var mWeb = "https://hub.dcm.pub/Home/m/index.html"
+        var userAgent = navigator.userAgent.toLowerCase();
+        if (userAgent == null || userAgent == '') {
+            location.href = pWeb;
+        } else {
+            if (userAgent.indexOf("android") != -1) {
+                location.href = mWeb;
+            } else if (userAgent.indexOf("ios") != -1 || userAgent.indexOf("iphone") != -1 || userAgent.indexOf("ipad") != -1) {
+                location.href = mWeb;
+            } else if (userAgent.indexOf("windows phone") != -1) {
+                location.href = mWeb;
+            } else {
+                location.href = pWeb;
+            }
+        }
+    </script>
+</body>
+
+</html>
